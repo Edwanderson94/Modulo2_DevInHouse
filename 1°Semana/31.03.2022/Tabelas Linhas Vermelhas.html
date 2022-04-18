@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+    <style>
+        :root {
+            --cor--linhas: red;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            border: 1px solid var(--cor--linhas);
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>TABELAS</h1>
+    <H2>Tabelas Simples</H2>
+    <table>
+        <tr>
+            <td>A0</td>
+            <td>B0</td>
+            <td>C0</td>
+        </tr>
+
+        <tr>
+            <td>A1</td>
+            <td>B1</td>
+            <td>C1</td>
+        </tr>
+
+        <tr>
+            <td>A2</td>
+            <td>B2</td>
+            <td>C2</td>
+        </tr>
+    </table>
+
+    <H2>Tabelas Simples - Mescla Colunas</H2>
+    <table>
+        <tr>
+            <td colspan="2">A0</td>
+            <td>C0</td>
+        </tr>
+
+        <tr>
+            <td>A1</td>
+            <td>B1</td>
+            <td>C1</td>
+        </tr>
+
+        <tr>
+            <td>A2</td>
+            <td>B2</td>
+            <td>C2</td>
+        </tr>
+    </table>
+
+    <H2>Tabelas Simples - Mescla de Linhas</H2>
+    <table>
+        <tr>
+            <td>A0</td>
+            <td>B0</td>
+            <td>C0</td>
+        </tr>
+
+        <tr>
+            <td rowspan="2">A1</td>
+            <td>B1</td>
+            <td>C1</td>
+        </tr>
+
+        <tr>
+            <td>B2</td>
+            <td>C2</td>
+        </tr>
+    </table>
+
+    <H2>Tabelas Complexa</H2>
+    <table>
+        <caption> Tabela com Caption, Thead e Tbody </caption>
+        <thead>
+            <th>A</th>
+            <th>B</th>
+            <th>C</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>A0</td>
+                <td>B0</td>
+                <td>C0</td>
+            </tr>
+            <tr>
+                <td>A1</td>
+                <td>B1</td>
+                <td>C1</td>
+            </tr>
+            <tr>
+                <td>A1</td>
+                <td>B2</td>
+                <td>C2</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Rodapé da Tabela</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+
+</html>

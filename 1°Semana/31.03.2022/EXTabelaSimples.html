@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio Tabela</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        th {
+            border: 1px solid black;
+            padding: 10px;
+            background-color: gray;
+        }
+
+        tfoot {
+            background-color: gray;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <h1>EXERCICIOS</h1>
+    <H2>Tabela Simples</H2>
+    <table>
+        <thead>
+            <th>A</th>
+            <th>B</th>
+            <th>C</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>A1</td>
+                <td>B1</td>
+                <td>C1</td>
+            </tr> 
+            <tr>
+                <td>A2</td>
+                <td>B2</td>
+                <td>C2</td>
+            </tr>
+            <tr>
+                <td>A3 </td>
+                <td>B3</td>
+                <td>C3</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <H2>Tabela Merge Colunas</H2>
+    <table>
+        <thead>
+            <th colspan="2">A</th>
+            <th>C</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>A1</td>
+                <td>B1</td>
+                <td>C1</td>
+            </tr> 
+            <tr>
+                <td>A2</td>
+                <td>B2</td>
+                <td>C2</td>
+            </tr>
+            <tr>
+                <td>A3 </td>
+                <td>B3</td>
+                <td>C3</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <H2>Tabela Merge Linha</H2>
+    <table>
+        <thead>
+            <th>A</th>
+            <th>B</th>
+            <th>C</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="3">A1</td>
+                <td>B1</td>
+                <td>C1</td>
+            </tr> 
+            <tr>
+                <td>B2</td>
+                <td>C2</td>
+            </tr>
+            <tr>
+                <td>B3</td>
+                <td>C3</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <H2>Tabela Complexa</H2>
+    <table>
+        <thead>
+            <th>A</th>
+            <th>B</th>
+            <th>C</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>A1</td>
+                <td>B1</td>
+                <td>C1</td>
+            </tr> 
+            <tr>
+                <td>A2</td>
+                <td>B2</td>
+                <td>C2</td>
+            </tr>
+            <tr>
+                <td>A3</td>
+                <td>B3</td>
+                <td>C3</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td colspan="3">RODAPÉ</td>
+        </tfoot>
+    </table>
+
+</body>
+
+</html>

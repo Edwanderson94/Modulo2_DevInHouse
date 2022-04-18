@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+<body>
+    <form action="Tabelas.html" method="get">
+        <!-- Required é campo obrigatório -->
+        <!-- Inserção de Nome do usuário -->
+        <input type="text" name="usuarioNome" id="1" placeholder="Digite seu usuário" required><br>
+        <!-- Inserção de senha -->
+        <input type="password" name="senha" id="2" placeholder="Digite sua senha" required><br>
+        <!-- Inserção de data de nascimento -->
+        <input type="date" name="data" id="3" placeholder="Digite a data de Nascimento" required><br>
+        <!-- Inserção de endereço de e-mail -->
+        <input type="email" name="email" id="4" placeholder="Digite seu e-mail" required><br>
+        <!-- Inserção de Arquivos -->
+        <input type="file" name="arquivo" id="5" required><br>
+        <!-- Inserção de opções de sexo -->
+        <!-- A opção checked obrigado usuario a marcar uma das opções -->
+        <input type="radio" name="sexo" id="6" value="M">
+        <label for="sexom">Masculino</label>
+        <input type="radio" name="sexo" id="7" value="F">
+        <label for="sexof">Feminino</label><br>
+        <input type="radio" name="sexo" id="8" value="U" checked>
+        <label for="sexof">Prefiro não Informar</label><br>
+
+        <!-- Define escrita do botão -->
+        <input type="submit" value="Clique Aqui"> 
+    </form>
+</body>
+</html>
