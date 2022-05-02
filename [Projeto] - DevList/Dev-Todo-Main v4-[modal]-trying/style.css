@@ -1,0 +1,317 @@
+/*
+| ====================================================================
+| Estilização do Dark Mode
+| ====================================================================
+*/
+
+
+/* Botão do Dark-Mode */
+.btn {
+    width: 80px;
+    height: 40px;
+    border: 5px solid #FFF;
+    border-radius: 60px;
+    position: relative;
+    cursor: pointer;
+    
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #FFF;
+    border-radius: 50%;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+    transition: left .5s;
+}
+
+.btn.active:before {
+    left: 43px;
+}
+
+/* Ativação do Dark-Mode */ 
+.localSecao.active,
+.localForm.active,
+.localMain.active,
+.main-footer.active,
+.localHeader.active {
+    background: linear-gradient(120deg, #212529, #303440);   
+}
+
+/*
+| ====================================================================
+| Estilização do site
+| ====================================================================
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+   background: linear-gradient(120deg, #173880, #406CC9);
+   color: #FFF;
+   font-family: 'Nunito+Sans', 'sans-serif';
+}
+
+/* Estilização de fundo e tipografia -> localHeader */
+ .localHeader {
+    height: 20vh;
+    background: linear-gradient(120deg, #173880, #406CC9);
+    color: #FFF;
+    font-family: 'Nunito+Sans', 'sans-serif';
+ }
+
+/* Estrutura do Titulo */
+.title {
+    font-size: 50px;
+    font-family: 'Nunito+Sans', 'sans-serif';
+    text-shadow: 2px 2px 5px #192E94;
+    color: #9DBBFD;
+}
+
+ /* Estilização de fundo e tipografia -> localSecao */
+ .localSecao {
+    background: linear-gradient(120deg, #173880, #406CC9);
+    color: #FFF;
+    font-family: 'Nunito+Sans', 'sans-serif';
+ }
+
+/* Estrutura do Sub-Titulo */
+.sub-title { 
+    /*
+    | =================================================================================
+    | Padrão ShortHand => font [font-style -> font-weight -> font-size -> font-family]
+    | =================================================================================
+    */
+    
+    height: 13vh;
+    width: 100vw;
+    font: italic lighter 20px 'Nunito+Sans', 'sans-serif';
+    text-shadow: 2px 2px 5px #192E94;
+    color: #9DBBFD;
+    text-align: center;
+}
+
+.localMain {
+    flex-grow: 1;
+}
+
+/* Estruturas do localHeader e localForm */
+.localHeader,
+.localForm {
+    min-height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Estilização de fundo e tipografia */
+.localForm {
+    background: linear-gradient(120deg, #173880, #406CC9);
+    color: #FFF;
+    font-family: 'Nunito+Sans', 'sans-serif';
+}
+
+form input,
+form button {
+    padding: 0.5rem;
+    font-size: 2em;
+    font-family: 'Nunito+Sans SemiBold 600';
+    font-weight: bold;
+    border: none;
+    background: #FFF;
+}
+
+form button {
+    color:  #28437D;
+    background: #FFF;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    background: #28437D;
+    color: #FFF;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo-list {
+    font-family: 'Nunito+Sans', 'sans-serif';
+    font-weight: bold;
+    min-width: 30%;
+    list-style: none;
+}
+
+.todo {
+    margin: .5rem;
+    background: #FFF;
+    color: #000;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .5s ease;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.trash-btn,
+.complete-btn {
+    background: #E04651;
+    color:#FFF;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.complete-btn {
+    background: #5CB053;
+}
+
+.todo-item {
+    font-family: 'Nunito+Sans', 'sans-serif';
+    font-weight: bold;
+    padding: 0rem .5rem;
+}
+
+.fa-trash,
+.fa-check {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall {
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+select {
+    color: #2F44AD;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
+}
+
+.select::after {
+    content: "\25BC";
+    position: absolute;
+    background: #2F44AD;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all .3s ease;
+}
+
+.select:hover::after {
+    background: #1A2661;
+    color: #9DBBFD;
+}
+
+.filter-todo {
+    font-family: 'Nunito+Sans', 'sans-serif';
+    font-weight: bold;
+}
+
+
+/* Estruturas e estilização do footer */
+.main-footer {
+    background-color: #476095;
+    color: #FFF;
+    font-family: 'Nunito+Sans', 'sans-serif';
+}
+
+/* Estruturas e estilização do modal */
+.modalItens {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 2000;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalItens.mostrar {
+    display: flex;
+}
+
+.modal {
+    background: #FFF;
+    width: 60%;
+    min-width: 300px;
+    padding: 40px;
+    border: 10px solid #2F44AD;
+    box-shadow: 0 0 0 10px #FFF;
+    position: relative;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+}
+
+.mostrar .modal {
+    animation: modal .3s;
+}
+
+.fechar {
+    position: absolute;
+    font-size: 1.2em;
+    top: -30px;
+    right: -30px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid #FFF;
+    background: #2F44AD;
+    color: #FFF;
+    cursor: pointer;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .5);
+}

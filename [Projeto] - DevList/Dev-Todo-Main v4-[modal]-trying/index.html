@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Adicionando a Fonte Nunito Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0">
+
+    <!-- Adicionando icones CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Adicionando Estilização -->
+    <link rel="stylesheet" href="./style.css">
+
+    <title>Dev-Todo-Main</title>
+</head>
+
+<body class="container">
+
+    <header class="localHeader">
+        <h1 class="title">DEV-LIST</h1>
+    </header>
+
+    <main class="localMain">
+
+        <h4 class="sub-title"> Welcome to the Dev List, here you can organize yourself more easily before making
+            your purchases, don't waste time and use technology to your advantage! </h4>
+
+        <section class="localSecao">
+
+            <form class="localForm">
+
+                <!-- Inserção de textos na lista -->
+                <input type="text" class="todo-input">
+
+                <!-- Botão para cadastrar item -->
+                <button id="addItens" class="todo-button" type="submit">
+                    <i class="fas fa-plus-square"></i>
+                </button>
+
+                <div class="select">
+
+                    <!-- Lista com os filtros "All", "Completed", "Uncompleted"-->
+                    <select name="todos" class="filter-todo">
+                        <option value="all">ALL</option>
+                        <option value="completed">Completed</option>
+                        <option value="uncompleted">Uncompleted</option>
+                    </select>
+                </div>
+
+                <!-- Botão Dark-Mode -->
+                <div class="btn"></div>
+            </form>
+
+            <!-- Lista de Itens -->
+            <div class="todo-container">
+                <ul class="todo-list"></ul>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        .
+    </footer>
+
+    <div id="modal-itens" class="modalItens">
+
+        <div class="modal">
+            <button class="fechar">X</button>
+            <h3 class="subModal">
+                Cadastre o valor do seu item
+            </h3>
+
+        <form>
+            <input type="text" class="input" placeholder="Valor">
+            <input type="button" class="button" value="Cadastrar">
+        </form>
+        </div>
+
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
