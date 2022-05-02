@@ -48,15 +48,26 @@ function addTodo(e) {
 
     // Criação de uma DIV com o nome de "TODO"
     const todoDiv = document.createElement('div');
-    todoDiv.classList.add("todo");
 
-    // Criação de listas
+    todoDiv.classList.add("todo");
+        var valor = parseInt(prompt ('Qual o valor do item?'));
+
+    if (!valor) {
+        todo.innerHTML = `<li class"warning-message"> Por Favor, Digite um valor! </li>`
+    }
+
+    window.confirm('Seu item foi cadastrado com sucesso')
+
+    // Criação de itens na lista
     const newTodo = document.createElement("li");
     newTodo.innerText = todoInput.value;
+    
+
 
     // Salvar informações no Local Storage
     saveLocalTodos(todoInput.value);
     
+    // Adicionando novo item a lista
     newTodo.classList.add('todo-item');
     todoDiv.appendChild(newTodo);
     todoInput.value = "";
@@ -212,11 +223,9 @@ btn.onclick = function() {
 
 function iniciaModal(modalId) {
     const modal = document.getElementById(modalId);
-    modal.classList.add('mostrar');
-    console.log(modal);
-    
+    modal.classList.add('mostrar');    
 }
 
-adicionaItens.addEventListener('click', () => iniciaModal('modal-itens'));
+// adicionaItens.addEventListener('click', () => iniciaModal('modal-itens'));
 
-
+console.log();

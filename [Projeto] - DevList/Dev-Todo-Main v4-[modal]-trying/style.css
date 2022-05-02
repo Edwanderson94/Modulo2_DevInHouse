@@ -253,9 +253,22 @@ select {
 
 /* Estruturas e estilização do footer */
 .main-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #476095;
     color: #FFF;
     font-family: 'Nunito+Sans', 'sans-serif';
+    padding-bottom: 20px;
+}
+
+.main-footer .logo {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.listImg {
+    width: 70px
 }
 
 /* Estruturas e estilização do modal */
